@@ -1,0 +1,15 @@
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /media/sf_ProjektyCPP/projekt1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3c02b/fast && gmake: Warning: File 'Makefile' has modification time 4.9 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_3c02b.dir/build.make CMakeFiles/cmTC_3c02b.dir/build
+gmake[1]: Entering directory '/media/sf_ProjektyCPP/projekt1/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_3c02b.dir/progress.make' has modification time 4.9 s in the future
+CMakeFiles/cmTC_3c02b.dir/build.make:73: CMakeFiles/cmTC_3c02b.dir/flags.make: No such file or directory
+gmake[1]: *** No rule to make target 'CMakeFiles/cmTC_3c02b.dir/flags.make'.  Stop.
+gmake[1]: Leaving directory '/media/sf_ProjektyCPP/projekt1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3c02b/fast] Error 2
+
+
+
+

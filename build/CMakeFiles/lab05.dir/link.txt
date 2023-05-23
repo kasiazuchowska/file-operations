@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/lab05.dir/main.cpp.o CMakeFiles/lab05.dir/src/Directory.cpp.o CMakeFiles/lab05.dir/src/File.cpp.o -o lab05  libMap.a 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMap.a CMakeFiles/Map.dir/src/Directory.cpp.o CMakeFiles/Map.dir/src/File.cpp.o
+/usr/bin/ranlib libMap.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/projekt1.dir/main.cpp.o CMakeFiles/projekt1.dir/src/Directory.cpp.o CMakeFiles/projekt1.dir/src/File.cpp.o -o projekt1  libMap.a 
