@@ -11,7 +11,7 @@ std::string File::GetName()const{
 }
 
 void File::print(int ile)const{
-    for(int i=0;i<ile;i++)std::cout<<"__";
+    for(int i=0;i<ile;i++)std::cout<<"..";
     std::cout<<GetName()<<std::endl;
 }
 
@@ -22,4 +22,8 @@ File* File::clone()const{
 
 void File::rename(std::string a){
     _name=a;
+}
+
+void File::search(std::string a, std::string b){
+    return;
 }

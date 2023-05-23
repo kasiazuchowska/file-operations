@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-#include <algorithm>
 #include <iostream>
 #include <typeinfo>
 #include "Directory.h"
@@ -9,8 +8,20 @@ Directory::Directory(std::string a) : File(a){}
 
 Directory::Directory(const Directory& a) : File(a){}
 
+Directory::~Directory(){
+    for(auto i : _list)delete i;
+    //delete _list;
+}
+
 Directory& Directory::operator+=(File *a){
     (this->_list).push_back(a);
+    return *this;
+}
+
+Directory& Directory::operator+=(Symlink* a){
+    std::string x = a->GetName() + " -> " + a->GetFile()->GetName();
+    File* tmp = new File(x);
+    (this->_list).push_back(tmp);
     return *this;
 }
 
@@ -27,7 +38,7 @@ File* Directory::operator-=(const std::string a){
 }
 
 void Directory::print(int ile)const{
-    for(int i=0;i<ile;i++)std::cout<<"__";
+    for(int i=0;i<ile;i++)std::cout<<"..";
     std::cout<<GetName()<<std::endl;
     for(auto i : _list){
         i->print(ile+1);
@@ -44,4 +55,15 @@ File* Directory::clone()const{
 
 void Directory::copy(File* a){
     *this += a->clone();
+}
+
+void Directory::search(std::string a, std::string b){
+    if(b==" -")std::cout<< a << ":" << std::endl;
+    for(auto i : _list){
+        if(a==i->GetName()){
+            std::cout << b << this->GetName() << "/" << i->GetName() << std::endl;
+            //b+=" ";
+        }
+        i->search(a,b+this->GetName()+"/");
+    }
 }
